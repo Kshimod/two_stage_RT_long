@@ -1113,7 +1113,7 @@ var score_block = {
 	type: jsPsychHtmlKeyboardResponse,
 	stimulus: function(){
 		bonus = score*5;		
-			let html = "<div align=center><p class='inst_text'>That was all for the behaviroal task!<br>これで行動実験は終了です!<br><br>Your total score is <font color = '#ff8000'><strong>" + score + "</font></strong> pioints.<br>あなたの得点は <strong><font color = '#ff8000'>" + score + "</font></strong> です。<br><br>You won an additional <strong><font color = '#ff8000'>￥" + bonus+ " </strong></font>on top of your regular payment for this experiment.<br>この実験では、3000円の報酬に加えて、さらに <font color = '#ff8000'><strong>" + bonus+ "円</font></strong> を獲得しました。<br><br>Press SPACE key to continue<br>スペースキーを押して続けてください</p></div><br>";
+			let html = "<div align=center><p class='inst_text'>That was all for the behaviroal task!<br>これで行動実験は終了です!<br><br>Your total score is <font color = '#ff8000'><strong>" + score + "</font></strong> pioints.<br>あなたの得点は <strong><font color = '#ff8000'>" + score + "</font></strong> です。<br><br>You won an additional <strong><font color = '#ff8000'>￥" + bonus+ " </strong></font>on top of your regular payment for this experiment.<br>この実験では、3000円の報酬に加えて、さらに <font color = '#ff8000'><strong>" + bonus+ "円</font></strong> を獲得しました。<br><br>Press SPACE key to continue<br>データを転送するので，スペースキーを押してください</p></div><br>";
             return html;
         },
 		choices: [" "]
