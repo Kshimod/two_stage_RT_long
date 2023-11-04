@@ -1185,6 +1185,7 @@ const ITI = {
             stay = null;
         };
         // update
+	data.timing = "main",
         data.prev_action = prev_a_state1;
         prev_a_state1 = pattern_chosen_state1;
         data.state1position = state1,
