@@ -109,7 +109,7 @@ const no_response =  "<p class='inst_text'>時間内に反応が得られませ�
     "カウントダウンが終わり、指示があってから2秒以内にキーを押すようにしてください。最初の選択肢に戻ります。<p>"
 const init_inst = "<p class='inst_text'>HOW?<br>LETS MOVE TO THE EXPERIMENT" +
     "<br>DRUING...<b>DIFFERENT</b>ので，注意してください。" +
-    "<br>本番は4つのブロックに分かれています。<br>ブロック間で適宜休憩を取りながら進めてください。" +
+    "<br>本番は3つのブロックに分かれています。<br>ブロック間で適宜休憩を取りながら進めてください。" +
     "<br><b>ブロックが変わっても，ロケットの行先が変わることはありません。</b>" +
     "<br>準備ができたら，スペースキーを押して始めてください。</p>";
 const block_fin = "<p class='inst_text'> これでこのブロックは終了です。<br><br>" +
@@ -157,7 +157,7 @@ var instructions_2_text = function(){
 	var instructions_2 = ["<div align=center><p class='inst_text'>これで練習用トライアルはすべて終了です。<br><br></div>",
 	"<div align=center><p class='inst_text'>目的は、<font color = '#3399ff'><strong>ポイントを獲得すること</Strong></font>を忘れないでください。r>そのことを念頭に置いてください。<br>もう一度、ヒントを確認しましょう。<br><br></div>",
     "<div align=justify>Hint #1:<br>ヒント#1:どの黄色のパターンがごほうびをもらえる確率が高いか、覚えておきましょう。<br><br>そのパターンからポイントがもらえる確率はゆっくり変化するので、報酬につながる確率が高いパターンは、近い将来、ポイントを獲得できる可能性が非常に高いのです。<br><br>Hint #2:<br>ヒント#2<br>欲しい黄色のパターンにつながりやすい水色のパターンを見つけて使用することで、より多くのポイントを得ることができます。</div><br><br>",
-    "<div align=center><p class='inst_text'>実験は<font color = '#ff8000'><Strong>4つのブロック</Strong></font>に分かれています。ブロックが終了するとお知らせがあります。<br> <br>ブロック間で適宜休憩を取ってください。<br><br>全部で<font color = '#3399ff'><Strong>200の試行</font></strong>があり、30分ほどで終わります。<br><br><font size = '8'><Strong>Good luck!<br><br>がんばってください!</Strong></font><br><br></div>"];
+    "<div align=center><p class='inst_text'>実験は<font color = '#ff8000'><Strong>3つのブロック</Strong></font>に分かれています。ブロックが終了するとお知らせがあります。<br> <br>ブロック間で適宜休憩を取ってください。<br><br>全部で<font color = '#3399ff'><Strong>200の試行</font></strong>があり、30分ほどで終わります。<br><br><font size = '8'><Strong>Good luck!<br><br>がんばってください!</Strong></font><br><br></div>"];
 	return instructions_2
 };
 
@@ -187,7 +187,7 @@ let result;
 let trial_n = 0;
 let block_n = 0;
 let trial_num = 50;
-let block_num = 4;
+let block_num = 3;
 let prac_trial_num = 30;
 let pattern_deact_duration = 1000;
 let long_reactiontime = 3000
@@ -1220,7 +1220,7 @@ const save_data = {
 
 // timeline for one block
 const one_block = {
-    timeline: [one_trial, ITI,save_data],
+    timeline: [one_trial, ITI],
     loop_function: function() {
         if (trial_n < trial_num) {// repeat trial_num trials
             return true;
