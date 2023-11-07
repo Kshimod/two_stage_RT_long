@@ -114,8 +114,8 @@ const init_inst = "<p class='inst_text'>HOW?<br>LETS MOVE TO THE EXPERIMENT" +
     "<br>準備ができたら，スペースキーを押して始めてください。</p>";
 const block_fin = "<p class='inst_text'> これでこのブロックは終了です。<br><br>" +
     "Feel free to have a short break. Press SPACE KEY to start when you're ready.<br>必要なだけ休憩を取り，準備ができたらスペースキーを押して次へ進んでください。<p>"
-const exp_fin = "<p class='inst_text'>Thank you! Your participation is a valuable contribution to our research.<br>ありがとうございました! あなたの参加は、私たちの研究への貴重な貢献です。<br><br>Feel free to take a short break. Then you can start filling up the questionnaire.<br>休憩はご自由にお取りください。その後、質問紙にお答えください。<br><br>"+
-    "You can access the questionnaire by right clicking <a href='https://forms.gle/z7VK5XGoyRqcpHeXA'>HERE</a> to open it in a new tab or use the link in the email.<br>質問紙は<a href='https://forms.gle/z7VK5XGoyRqcpHeXA'>こちら</a>をを右クリックして新しいタブを開くか、メールに記載されているリンクからアクセスできます。<br><br>Press SPACE key to submit your results.<br>スペースキーを押して、結果を送信してください。";
+const exp_fin = "<p class='inst_text'>Thank you! Your participation is a valuable contribution to our research.<br>ありがとうございました! あなたの参加は、私たちの研究への貴重な貢献です。<br><br>"+
+    "Press SPACE key to submit your results.<br>スペースキーを押して、結果を送信してください。";
 
 
 //instructions
@@ -1113,7 +1113,7 @@ var score_block = {
 	type: jsPsychHtmlKeyboardResponse,
 	stimulus: function(){
 		bonus = score*5;		
-			let html = "<div align=center><p class='inst_text'>That was all for the behaviroal task!<br>これで行動実験は終了です!<br><br>Your total score is <font color = '#ff8000'><strong>" + score + "</font></strong> pioints.<br>あなたの得点は <strong><font color = '#ff8000'>" + score + "</font></strong> です。<br><br>You won an additional <strong><font color = '#ff8000'>￥" + bonus+ " </strong></font>on top of your regular payment for this experiment.<br>この実験では、3000円の報酬に加えて、さらに <font color = '#ff8000'><strong>" + bonus+ "円</font></strong> を獲得しました。<br><br>Press SPACE key to continue<br>データを転送するので，スペースキーを押してください</p></div><br>";
+			let html = "<div align=center><p class='inst_text'>That was all for the behaviroal task!<br>これで行動実験は終了です!<br><br>Your total score is <font color = '#ff8000'><strong>" + score + "</font></strong> pioints.<br>あなたの得点は <strong><font color = '#ff8000'>" + score + "</font></strong> です。<br><br>Press SPACE key to continue<br>データを転送するので，スペースキーを押してください</p></div><br>";
             return html;
         },
 		choices: [" "]
